@@ -5,7 +5,7 @@ variable "AWS_REGION" {
 
 # Setup Default Instance Type
 variable "TFC_INSTANCE_TYPE" {
-  default = "t2.micro" 
+  default = "t2.micro"
 }
 
 # Setup VPC CIDR Prefix
@@ -20,7 +20,7 @@ variable "vpc_cidr_prefix" {
 
 # Setup Availability Zones 
 variable "av_zones" {
-  default = ["a","b","c"]
+  default = ["a", "b", "c"]
 }
 
 # Setup Default Route
@@ -46,11 +46,11 @@ variable "tfc_bke_launch_script" {
   default = ""
 }
 # APP AMI ID
-variable tfc_app_ami{
+variable "tfc_app_ami" {
   default = "ami-0f2c126811ca75d0c"
 }
 
 # BKE AMI ID
-variable tfc_bke_ami{
+variable "tfc_bke_ami" {
   default = "ami-037f342acee5b762d"
 }

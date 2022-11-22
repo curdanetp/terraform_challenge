@@ -2,18 +2,18 @@
 # LOAD BALANCERS SUBNETS
 
 resource "aws_subnet" "lbl_pub_snet_1" {
-  vpc_id            = aws_vpc.tfc_vpc.id
-  availability_zone = "${var.AWS_REGION}a"
-  cidr_block        = "${var.vpc_cidr_prefix}0.0/24"
+  vpc_id                  = aws_vpc.tfc_vpc.id
+  availability_zone       = "${var.AWS_REGION}a"
+  cidr_block              = "${var.vpc_cidr_prefix}0.0/24"
   map_public_ip_on_launch = "true"
-  tags              = { "Name" = "lbl_pub_snet_1" }
+  tags                    = { "Name" = "lbl_pub_snet_1" }
 }
 resource "aws_subnet" "lbl_pub_snet_2" {
-  vpc_id            = aws_vpc.tfc_vpc.id
-  availability_zone = "${var.AWS_REGION}b"
-  cidr_block        = "${var.vpc_cidr_prefix}1.0/24"
+  vpc_id                  = aws_vpc.tfc_vpc.id
+  availability_zone       = "${var.AWS_REGION}b"
+  cidr_block              = "${var.vpc_cidr_prefix}1.0/24"
   map_public_ip_on_launch = "true"
-  tags              = { "Name" = "lbl_pub_snet_2" }
+  tags                    = { "Name" = "lbl_pub_snet_2" }
 }
 
 # APP INSTANCES SUBNETS
