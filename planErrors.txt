@@ -1,16 +1,6 @@
-Error: creating ELBv2 Listener (arn:aws:elasticloadbalancing:us-east-1:432533025406:loadbalancer/app/tf-lb-20221122154120576700000001/705a7b3aeeb49c15): IncompatibleProtocols: The listener and the following target groups have incompatible protocols: arn:aws:elasticloadbalancing:us-east-1:432533025406:targetgroup/tfc-app-tgt-grp/6b1db084650b1649
-│       status code: 400, request id: 6bcd44c6-e9fc-47c9-85d9-b126772f5869
-│ 
-│   with aws_lb_listener.tfc_app_alb_listen,
-│   on 31_loadbalancing.tf line 36, in resource "aws_lb_listener" "tfc_app_alb_listen":
-│   36: resource "aws_lb_listener" "tfc_app_alb_listen" {
-│ 
-╵
-╷
-│ Error: creating ELBv2 Listener (arn:aws:elasticloadbalancing:us-east-1:432533025406:loadbalancer/app/tf-lb-20221122154121106800000002/21b8e5f2245c2ef0): IncompatibleProtocols: The listener and the following target groups have incompatible protocols: arn:aws:elasticloadbalancing:us-east-1:432533025406:targetgroup/tfc-bke-tgt-grp/188ce584b4c5d2c9
-│       status code: 400, request id: e4568af5-afbf-4af2-a406-8d3c3221a1c8
-│ 
-│   with aws_lb_listener.tfc_bke_alb_listen,
-│   on 31_loadbalancing.tf line 62, in resource "aws_lb_listener" "tfc_bke_alb_listen":
-│   62: resource "aws_lb_listener" "tfc_bke_alb_listen" {
+ERROR:
+Unhealthy Target Groups in both layers, APP & BKE instances.
+
+TODO:
+DB Layer plan and deployment
 │ 

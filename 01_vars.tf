@@ -54,3 +54,8 @@ variable "tfc_app_ami" {
 variable "tfc_bke_ami" {
   default = "ami-037f342acee5b762d"
 }
+
+# DB PASSWORD
+variable  "db_password" {
+  default = "Gaby1997!"
+}
