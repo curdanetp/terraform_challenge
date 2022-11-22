@@ -1,43 +1,5 @@
-aws_lb_listener.tfc_app_alb_listen: Creating...
-╷
-│ Error: error creating Route in Route Table (rtb-04f2c838a5e6ba377) with destination (10.1.0.0/16): InvalidParameterValue: The destination CIDR block 10.1.0.0/16 is equal to or more specific than one of this VPC's CIDR blocks. This route can target only an interface or an instance.
-│       status code: 400, request id: ea3a03bc-d6f2-44f8-bb97-d1cdddef4731
-│ 
-│   with aws_route_table.tfc_app_rt_table,
-│   on 12_igw_routing.tf line 39, in resource "aws_route_table" "tfc_app_rt_table":
-│   39: resource "aws_route_table" "tfc_app_rt_table" {
-│ 
-╵
-╷
-│ Error: error creating Route in Route Table (rtb-0e83141612f4d0677) with destination (10.1.0.0/16): InvalidParameterValue: The destination CIDR block 10.1.0.0/16 is equal to or more specific than one of this VPC's CIDR blocks. This route can target only an interface or an instance.
-│       status code: 400, request id: eff7cc8f-19f9-42d5-9881-783b1439cec4
-│ 
-│   with aws_route_table.tfc_bke_rt_table,
-│   on 12_igw_routing.tf line 62, in resource "aws_route_table" "tfc_bke_rt_table":
-│   62: resource "aws_route_table" "tfc_bke_rt_table" {
-│ 
-╵
-╷
-│ Error: creating Auto Scaling Group (tfc_app_asg): ValidationError: Provided Target Group 'arn:aws:elasticloadbalancing:us-east-1:432533025406:targetgroup/tfc-app-tgt-grp/b46bd79316c16f9a' has invalid target type. Please ensure all provided Target Groups have target type of instance.
-│       status code: 400, request id: 18c575d5-9a30-4653-8e8d-097e99956fe2
-│ 
-│   with aws_autoscaling_group.tfc_app_asg,
-│   on 30_autoscalling.tf line 20, in resource "aws_autoscaling_group" "tfc_app_asg":
-│   20: resource "aws_autoscaling_group" "tfc_app_asg" {
-│ 
-╵
-╷
-│ Error: creating Auto Scaling Group (tfc_bke_asg): ValidationError: Provided Target Group 'arn:aws:elasticloadbalancing:us-east-1:432533025406:targetgroup/tfc-bke-tgt-grp/038ee059d7c697bb' has invalid target type. Please ensure all provided Target Groups have target type of instance.
-│       status code: 400, request id: f17f378c-3051-4042-b8e8-73e2475cf424
-│ 
-│   with aws_autoscaling_group.tfc_bke_asg,
-│   on 30_autoscalling.tf line 55, in resource "aws_autoscaling_group" "tfc_bke_asg":
-│   55: resource "aws_autoscaling_group" "tfc_bke_asg" {
-│ 
-╵
-╷
-│ Error: creating ELBv2 Listener (arn:aws:elasticloadbalancing:us-east-1:432533025406:loadbalancer/app/tf-lb-20221122061423273800000002/bbba74201905de0d): IncompatibleProtocols: The listener and the following target groups have incompatible protocols: arn:aws:elasticloadbalancing:us-east-1:432533025406:targetgroup/tfc-app-tgt-grp/b46bd79316c16f9a
-│       status code: 400, request id: f3835400-8ce8-4372-affe-47d130469e29
+Error: creating ELBv2 Listener (arn:aws:elasticloadbalancing:us-east-1:432533025406:loadbalancer/app/tf-lb-20221122154120576700000001/705a7b3aeeb49c15): IncompatibleProtocols: The listener and the following target groups have incompatible protocols: arn:aws:elasticloadbalancing:us-east-1:432533025406:targetgroup/tfc-app-tgt-grp/6b1db084650b1649
+│       status code: 400, request id: 6bcd44c6-e9fc-47c9-85d9-b126772f5869
 │ 
 │   with aws_lb_listener.tfc_app_alb_listen,
 │   on 31_loadbalancing.tf line 36, in resource "aws_lb_listener" "tfc_app_alb_listen":
@@ -45,8 +7,8 @@ aws_lb_listener.tfc_app_alb_listen: Creating...
 │ 
 ╵
 ╷
-│ Error: creating ELBv2 Listener (arn:aws:elasticloadbalancing:us-east-1:432533025406:loadbalancer/app/tf-lb-20221122061423204000000001/e6f864a63fb0a135): IncompatibleProtocols: The listener and the following target groups have incompatible protocols: arn:aws:elasticloadbalancing:us-east-1:432533025406:targetgroup/tfc-bke-tgt-grp/038ee059d7c697bb
-│       status code: 400, request id: 1f6633a0-16c2-48c9-ade0-cda64a153621
+│ Error: creating ELBv2 Listener (arn:aws:elasticloadbalancing:us-east-1:432533025406:loadbalancer/app/tf-lb-20221122154121106800000002/21b8e5f2245c2ef0): IncompatibleProtocols: The listener and the following target groups have incompatible protocols: arn:aws:elasticloadbalancing:us-east-1:432533025406:targetgroup/tfc-bke-tgt-grp/188ce584b4c5d2c9
+│       status code: 400, request id: e4568af5-afbf-4af2-a406-8d3c3221a1c8
 │ 
 │   with aws_lb_listener.tfc_bke_alb_listen,
 │   on 31_loadbalancing.tf line 62, in resource "aws_lb_listener" "tfc_bke_alb_listen":
