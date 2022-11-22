@@ -2,7 +2,7 @@
 # APP Target Group
 resource "aws_lb_target_group" "tfc_app_tgt_grp" {
   name        = "tfc-app-tgt-grp"
-  target_type = "alb"
+  target_type = "instance"
   port        = 80
   protocol    = "TCP"
   vpc_id      = aws_vpc.tfc_vpc.id
@@ -11,7 +11,7 @@ resource "aws_lb_target_group" "tfc_app_tgt_grp" {
 # Backend Target Group
 resource "aws_lb_target_group" "tfc_bke_tgt_grp" {
   name        = "tfc-bke-tgt-grp"
-  target_type = "alb"
+  target_type = "instance"
   port        = 4000
   protocol    = "TCP"
   vpc_id      = aws_vpc.tfc_vpc.id

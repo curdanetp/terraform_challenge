@@ -38,10 +38,10 @@ resource "aws_route_table_association" "tfc_pub_bke_rt" {
 # Route table: APPLICATION ROUTE TABLE ########################################################################
 resource "aws_route_table" "tfc_app_rt_table" {
   vpc_id = aws_vpc.tfc_vpc.id
-  route {
-    cidr_block = "${var.vpc_cidr_prefix}0.0/16"    
-    gateway_id = aws_internet_gateway.tfc_igw.id
-  }
+  //route {
+  //  cidr_block = "${var.vpc_cidr_prefix}0.0/16"    
+  //  gateway_id = aws_internet_gateway.tfc_igw.id
+  //}
 }
 
 # Route table association of public subnets
@@ -61,10 +61,10 @@ resource "aws_route_table_association" "tfc_prv_app_c_rt" {
 # Route table: BACKEND ROUTE TABLE ########################################################################
 resource "aws_route_table" "tfc_bke_rt_table" {
   vpc_id = aws_vpc.tfc_vpc.id
-  route {
-    cidr_block = "${var.vpc_cidr_prefix}0.0/16"
-    gateway_id = aws_internet_gateway.tfc_igw.id
-  }
+  //route {
+  //  cidr_block = "${var.vpc_cidr_prefix}0.0/16"
+  //  gateway_id = aws_internet_gateway.tfc_igw.id
+  //}
 }
 
 # Route table association of public subnets
