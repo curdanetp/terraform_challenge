@@ -42,6 +42,15 @@ variable "tfc_app_launch_script" {
 }
 
 # Setup already Created Bke Launch Template
-variable "tfc_app_launch_script" {
+variable "tfc_bke_launch_script" {
   default = ""
+}
+# APP AMI ID
+variable tfc_app_ami{
+  default = "ami-0f2c126811ca75d0c"
+}
+
+# BKE AMI ID
+variable tfc_bke_ami{
+  default = "ami-037f342acee5b762d"
 }

@@ -1,5 +1,5 @@
 # Configuration related to security groups
-
+# Public S.Group
 resource "aws_security_group" "tfc-pub-sg" {
     name        = "tfc-pub-sg"
     description = "Security Group Public"
@@ -13,6 +13,7 @@ resource "aws_security_group" "tfc-pub-sg" {
     }
 }
 
+# App Load Balancer S.Group
 resource "aws_security_group" "tfc_app_lb_sg" {
     name        = "tfc_app_lb_sg"
     description = "Security Group for Apps Load Balancer"
@@ -25,6 +26,7 @@ resource "aws_security_group" "tfc_app_lb_sg" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 }
+# App S.Group
 resource "aws_security_group" "tfc_app_sg" {
     name        = "tfc_app_sg"
     description = "Security Group for Apps Instances"
@@ -48,7 +50,7 @@ resource "aws_security_group" "tfc_app_sg" {
     }
 
 }
-
+# Bkend Load Balancer S.Group
 resource "aws_security_group" "tfc_bke_lb_sg" {
     name        = "tfc_bke_lb_sg"
     description = "Security Group from Apps Instances to Bke LoadBalancer"
@@ -64,6 +66,7 @@ resource "aws_security_group" "tfc_bke_lb_sg" {
 
 }
 
+# Bkend S.Group
 resource "aws_security_group" "tfc_bke_sg" {
     name        = "tfc_bke_sg"
     description = "Security Group for Backend Instances"
@@ -87,7 +90,7 @@ resource "aws_security_group" "tfc_bke_sg" {
     }
 
 }
-
+# RDS Database Server S.Group
 resource "aws_security_group" "tfc_rds_dba_sg" {
     name        = "tfc_bke_lb_sg"
     description = "Security Group for RDS Database"

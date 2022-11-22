@@ -1,6 +1,7 @@
+# TARGET GROUPS ####################################################
 # APP Target Group
 resource "aws_lb_target_group" "tfc_app_tgt_grp" {
-  name     = "tfc_app_tgt_grp"
+  name     = "tfc-app-tgt-grp"
   target_type = "alb"
   port     = 80
   protocol = "HTTP"
@@ -9,7 +10,7 @@ resource "aws_lb_target_group" "tfc_app_tgt_grp" {
 
 # Backend Target Group
 resource "aws_lb_target_group" "tfc_bke_tgt_grp" {
-  name     = "tfc_bke_tgt_grp"
+  name     = "tfc-bke-tgt-grp"
   target_type = "alb"
   port     = 4000
   protocol = "TCP"
